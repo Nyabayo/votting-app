@@ -9,6 +9,20 @@ class SignUpPage extends StatefulWidget {
 }
 
 class _SignUpPageState extends State<SignUpPage> {
+  final TextEditingController firstnameController = TextEditingController();
+  final TextEditingController lastnameController = TextEditingController();
+  final TextEditingController idController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
+
+  @override
+  void dispose() {
+    super.dispose();
+    firstnameController.dispose();
+    lastnameController.dispose();
+    idController.dispose();
+    phoneController.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -62,7 +76,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         child: TextFieldForm(
                             hintText: 'Enter first name',
                             prefix: const Icon(Icons.person),
-                            controller: TextEditingController(),
+                            controller: firstnameController,
                             obsecureText: false,
                             keyboardType: TextInputType.name)),
                     const SizedBox(
@@ -73,7 +87,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         child: TextFieldForm(
                             hintText: 'Enter Last name',
                             prefix: const Icon(Icons.person),
-                            controller: TextEditingController(),
+                            controller: lastnameController,
                             obsecureText: false,
                             keyboardType: TextInputType.name)),
                     const SizedBox(
@@ -84,7 +98,7 @@ class _SignUpPageState extends State<SignUpPage> {
                         child: TextFieldForm(
                             hintText: 'Enter ID number',
                             prefix: const Icon(Icons.person),
-                            controller: TextEditingController(),
+                            controller: idController,
                             obsecureText: false,
                             keyboardType: TextInputType.number)),
                     const SizedBox(
@@ -94,8 +108,8 @@ class _SignUpPageState extends State<SignUpPage> {
                         padding: const EdgeInsets.symmetric(horizontal: 20),
                         child: TextFieldForm(
                             hintText: 'Enter Phone number',
-                            prefix:const  Icon(Icons.phone),
-                            controller: TextEditingController(),
+                            prefix: const Icon(Icons.phone),
+                            controller: phoneController,
                             obsecureText: false,
                             keyboardType: TextInputType.phone)),
                     const SizedBox(
