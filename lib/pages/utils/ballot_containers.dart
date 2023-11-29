@@ -14,7 +14,7 @@ class BallotContainers extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 140,
+      height: 150,
       width: 160,
       decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(Radius.circular(20)),

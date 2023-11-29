@@ -8,15 +8,14 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: const Color.fromARGB(255, 2, 35, 63),
-          title: const Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text('Your vote your choice'),
-              Icon(Icons.verified_user_outlined)
-            ],
-          ),
-        ),
+            backgroundColor: const Color.fromARGB(255, 2, 35, 63),
+            title: const Text(
+              'Your vote your choice',
+              style: TextStyle(color: Colors.white),
+            ),
+            actions: const [
+              Icon(Icons.verified_user_outlined, color: Colors.white),
+            ]),
         backgroundColor: Colors.blueGrey,
         body: SingleChildScrollView(
           child: Column(
